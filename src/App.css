@@ -43,3 +43,9 @@
   color: #888;
 }
 
+
+.taskDelete{
+  display: flex;
+  flex-direction: row;
+  
+}

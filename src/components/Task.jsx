@@ -1,7 +1,20 @@
-// Este componente muestra una tarea individual y maneja los eventos de clic en la tarea.
-// A `Task` le pasaremos el `id` como `key`, la tarea, y las funciones de borrado y completado para poder usarlas en cada tarea.
-//aquí tendremos cada una de las tareas con las funcionalidades de `borrar` y `marcar como completada`. 
+// `src/Task.js`: Este componente muestra una tarea individual y maneja los eventos de clic en la tarea.
 
 
-//FUNCION BORRADO
-//FUNCION COMPLETADO
+const Task = ({ task, deleteTask, taskCompleted }) => {
+
+    return (
+
+        <div className="task-container">
+            <span
+                onClick={() => taskCompleted(task.id)}
+                style={{ cursor: 'pointer' }}>
+            {task.text}
+            </span>
+            <button className="task-close" onClick={() => deleteTask(task.id)}>X</button>
+        </div>
+        )
+    }
+    
+    export default Task
+
